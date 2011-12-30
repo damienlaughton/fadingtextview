@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6D168AFA14AE14AA005A19CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D168AF914AE14AA005A19CA /* UIKit.framework */; };
+		6D168AFC14AE14AA005A19CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D168AFB14AE14AA005A19CA /* Foundation.framework */; };
+		6D168AFE14AE14AA005A19CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D168AFD14AE14AA005A19CA /* CoreGraphics.framework */; };
+		6D168B0414AE14AA005A19CA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D168B0214AE14AA005A19CA /* InfoPlist.strings */; };
+		6D168B0614AE14AA005A19CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D168B0514AE14AA005A19CA /* main.m */; };
+		6D168B0A14AE14AA005A19CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D168B0914AE14AA005A19CA /* AppDelegate.m */; };
+		6D168B0D14AE14AA005A19CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D168B0C14AE14AA005A19CA /* ViewController.m */; };
+		6D168B1014AE14AA005A19CA /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D168B0E14AE14AA005A19CA /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6D168AF514AE14AA005A19CA /* fadingtextview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fadingtextview.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D168AF914AE14AA005A19CA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6D168AFB14AE14AA005A19CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6D168AFD14AE14AA005A19CA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6D168B0114AE14AA005A19CA /* fadingtextview-Info.plist */ = {isa = PBXFileReference; path = "fadingtextview-Info.plist"; sourceTree = "<group>"; };
+		6D168B0314AE14AA005A19CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6D168B0514AE14AA005A19CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6D168B0714AE14AA005A19CA /* fadingtextview-Prefix.pch */ = {isa = PBXFileReference; path = "fadingtextview-Prefix.pch"; sourceTree = "<group>"; };
+		6D168B0814AE14AA005A19CA /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		6D168B0914AE14AA005A19CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6D168B0B14AE14AA005A19CA /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		6D168B0C14AE14AA005A19CA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6D168B0F14AE14AA005A19CA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D168AF214AE14AA005A19CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D168AFA14AE14AA005A19CA /* UIKit.framework in Frameworks */,
+				6D168AFC14AE14AA005A19CA /* Foundation.framework in Frameworks */,
+				6D168AFE14AE14AA005A19CA /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6D168AEA14AE14AA005A19CA = {
+			isa = PBXGroup;
+			children = (
+				6D168AFF14AE14AA005A19CA /* fadingtextview */,
+				6D168AF814AE14AA005A19CA /* Frameworks */,
+				6D168AF614AE14AA005A19CA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6D168AF614AE14AA005A19CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D168AF514AE14AA005A19CA /* fadingtextview.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D168AF814AE14AA005A19CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D168AF914AE14AA005A19CA /* UIKit.framework */,
+				6D168AFB14AE14AA005A19CA /* Foundation.framework */,
+				6D168AFD14AE14AA005A19CA /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D168AFF14AE14AA005A19CA /* fadingtextview */ = {
+			isa = PBXGroup;
+			children = (
+				6D168B0814AE14AA005A19CA /* AppDelegate.h */,
+				6D168B0914AE14AA005A19CA /* AppDelegate.m */,
+				6D168B0B14AE14AA005A19CA /* ViewController.h */,
+				6D168B0C14AE14AA005A19CA /* ViewController.m */,
+				6D168B0E14AE14AA005A19CA /* ViewController.xib */,
+				6D168B0014AE14AA005A19CA /* Supporting Files */,
+			);
+			path = fadingtextview;
+			sourceTree = "<group>";
+		};
+		6D168B0014AE14AA005A19CA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D168B0114AE14AA005A19CA /* fadingtextview-Info.plist */,
+				6D168B0214AE14AA005A19CA /* InfoPlist.strings */,
+				6D168B0514AE14AA005A19CA /* main.m */,
+				6D168B0714AE14AA005A19CA /* fadingtextview-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6D168AF414AE14AA005A19CA /* fadingtextview */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D168B1314AE14AA005A19CA /* Build configuration list for PBXNativeTarget "fadingtextview" */;
+			buildPhases = (
+				6D168AF114AE14AA005A19CA /* Sources */,
+				6D168AF214AE14AA005A19CA /* Frameworks */,
+				6D168AF314AE14AA005A19CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = fadingtextview;
+			productName = fadingtextview;
+			productReference = 6D168AF514AE14AA005A19CA /* fadingtextview.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6D168AEC14AE14AA005A19CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Mobilology Limited";
+			};
+			buildConfigurationList = 6D168AEF14AE14AA005A19CA /* Build configuration list for PBXProject "fadingtextview" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6D168AEA14AE14AA005A19CA;
+			productRefGroup = 6D168AF614AE14AA005A19CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6D168AF414AE14AA005A19CA /* fadingtextview */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6D168AF314AE14AA005A19CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D168B0414AE14AA005A19CA /* InfoPlist.strings in Resources */,
+				6D168B1014AE14AA005A19CA /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6D168AF114AE14AA005A19CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D168B0614AE14AA005A19CA /* main.m in Sources */,
+				6D168B0A14AE14AA005A19CA /* AppDelegate.m in Sources */,
+				6D168B0D14AE14AA005A19CA /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6D168B0214AE14AA005A19CA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D168B0314AE14AA005A19CA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6D168B0E14AE14AA005A19CA /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D168B0F14AE14AA005A19CA /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6D168B1114AE14AA005A19CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		6D168B1214AE14AA005A19CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6D168B1414AE14AA005A19CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "fadingtextview/fadingtextview-Prefix.pch";
+				INFOPLIST_FILE = "fadingtextview/fadingtextview-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6D168B1514AE14AA005A19CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "fadingtextview/fadingtextview-Prefix.pch";
+				INFOPLIST_FILE = "fadingtextview/fadingtextview-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D168AEF14AE14AA005A19CA /* Build configuration list for PBXProject "fadingtextview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D168B1114AE14AA005A19CA /* Debug */,
+				6D168B1214AE14AA005A19CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D168B1314AE14AA005A19CA /* Build configuration list for PBXNativeTarget "fadingtextview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D168B1414AE14AA005A19CA /* Debug */,
+				6D168B1514AE14AA005A19CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6D168AEC14AE14AA005A19CA /* Project object */;
+}
