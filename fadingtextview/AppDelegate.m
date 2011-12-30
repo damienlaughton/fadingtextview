@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "ViewController.h"
+#import "FadingTextView.h"
 
 @implementation AppDelegate
 
@@ -26,7 +26,7 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
+    self.viewController = [[FadingTextView alloc] initWithFrame:CGRectMake(0, 0, 320, 460) andFadeColor:[UIColor redColor]];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

@@ -13,8 +13,9 @@
 		6D168B0414AE14AA005A19CA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D168B0214AE14AA005A19CA /* InfoPlist.strings */; };
 		6D168B0614AE14AA005A19CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D168B0514AE14AA005A19CA /* main.m */; };
 		6D168B0A14AE14AA005A19CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D168B0914AE14AA005A19CA /* AppDelegate.m */; };
-		6D168B0D14AE14AA005A19CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D168B0C14AE14AA005A19CA /* ViewController.m */; };
-		6D168B1014AE14AA005A19CA /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D168B0E14AE14AA005A19CA /* ViewController.xib */; };
+		6D168B1914AE14F8005A19CA /* FadingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D168B1714AE14F8005A19CA /* FadingTextView.m */; };
+		6D168B1A14AE14F8005A19CA /* FadingTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D168B1814AE14F8005A19CA /* FadingTextView.xib */; };
+		6D168B1C14AE1C9F005A19CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D168B1B14AE1C9F005A19CA /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +23,16 @@
 		6D168AF914AE14AA005A19CA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6D168AFB14AE14AA005A19CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6D168AFD14AE14AA005A19CA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		6D168B0114AE14AA005A19CA /* fadingtextview-Info.plist */ = {isa = PBXFileReference; path = "fadingtextview-Info.plist"; sourceTree = "<group>"; };
+		6D168B0114AE14AA005A19CA /* fadingtextview-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "fadingtextview-Info.plist"; sourceTree = "<group>"; };
 		6D168B0314AE14AA005A19CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6D168B0514AE14AA005A19CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6D168B0714AE14AA005A19CA /* fadingtextview-Prefix.pch */ = {isa = PBXFileReference; path = "fadingtextview-Prefix.pch"; sourceTree = "<group>"; };
-		6D168B0814AE14AA005A19CA /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		6D168B0714AE14AA005A19CA /* fadingtextview-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fadingtextview-Prefix.pch"; sourceTree = "<group>"; };
+		6D168B0814AE14AA005A19CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6D168B0914AE14AA005A19CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6D168B0B14AE14AA005A19CA /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
-		6D168B0C14AE14AA005A19CA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		6D168B0F14AE14AA005A19CA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		6D168B1614AE14F8005A19CA /* FadingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadingTextView.h; sourceTree = "<group>"; };
+		6D168B1714AE14F8005A19CA /* FadingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FadingTextView.m; sourceTree = "<group>"; };
+		6D168B1814AE14F8005A19CA /* FadingTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FadingTextView.xib; sourceTree = "<group>"; };
+		6D168B1B14AE1C9F005A19CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D168B1C14AE1C9F005A19CA /* QuartzCore.framework in Frameworks */,
 				6D168AFA14AE14AA005A19CA /* UIKit.framework in Frameworks */,
 				6D168AFC14AE14AA005A19CA /* Foundation.framework in Frameworks */,
 				6D168AFE14AE14AA005A19CA /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +70,7 @@
 		6D168AF814AE14AA005A19CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6D168B1B14AE1C9F005A19CA /* QuartzCore.framework */,
 				6D168AF914AE14AA005A19CA /* UIKit.framework */,
 				6D168AFB14AE14AA005A19CA /* Foundation.framework */,
 				6D168AFD14AE14AA005A19CA /* CoreGraphics.framework */,
@@ -79,10 +83,10 @@
 			children = (
 				6D168B0814AE14AA005A19CA /* AppDelegate.h */,
 				6D168B0914AE14AA005A19CA /* AppDelegate.m */,
-				6D168B0B14AE14AA005A19CA /* ViewController.h */,
-				6D168B0C14AE14AA005A19CA /* ViewController.m */,
-				6D168B0E14AE14AA005A19CA /* ViewController.xib */,
 				6D168B0014AE14AA005A19CA /* Supporting Files */,
+				6D168B1614AE14F8005A19CA /* FadingTextView.h */,
+				6D168B1714AE14F8005A19CA /* FadingTextView.m */,
+				6D168B1814AE14F8005A19CA /* FadingTextView.xib */,
 			);
 			path = fadingtextview;
 			sourceTree = "<group>";
@@ -150,7 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D168B0414AE14AA005A19CA /* InfoPlist.strings in Resources */,
-				6D168B1014AE14AA005A19CA /* ViewController.xib in Resources */,
+				6D168B1A14AE14F8005A19CA /* FadingTextView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +167,7 @@
 			files = (
 				6D168B0614AE14AA005A19CA /* main.m in Sources */,
 				6D168B0A14AE14AA005A19CA /* AppDelegate.m in Sources */,
-				6D168B0D14AE14AA005A19CA /* ViewController.m in Sources */,
+				6D168B1914AE14F8005A19CA /* FadingTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,14 +180,6 @@
 				6D168B0314AE14AA005A19CA /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		6D168B0E14AE14AA005A19CA /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6D168B0F14AE14AA005A19CA /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -241,6 +237,7 @@
 				GCC_PREFIX_HEADER = "fadingtextview/fadingtextview-Prefix.pch";
 				INFOPLIST_FILE = "fadingtextview/fadingtextview-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -252,6 +249,7 @@
 				GCC_PREFIX_HEADER = "fadingtextview/fadingtextview-Prefix.pch";
 				INFOPLIST_FILE = "fadingtextview/fadingtextview-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
