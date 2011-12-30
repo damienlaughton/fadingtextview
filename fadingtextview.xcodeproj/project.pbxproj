@@ -254,6 +254,45 @@
 			};
 			name = Release;
 		};
+		6D168B2614AE6E01005A19CA /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = "Ad Hoc";
+		};
+		6D168B2714AE6E01005A19CA /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mobilology Limited";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "fadingtextview/fadingtextview-Prefix.pch";
+				INFOPLIST_FILE = "fadingtextview/fadingtextview-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "DE7D422A-25F6-41DD-ABF5-F7ADF39EBB15";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Ad Hoc";
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -261,6 +300,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6D168B1114AE14AA005A19CA /* Debug */,
+				6D168B2614AE6E01005A19CA /* Ad Hoc */,
 				6D168B1214AE14AA005A19CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -270,9 +310,11 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6D168B1414AE14AA005A19CA /* Debug */,
+				6D168B2714AE6E01005A19CA /* Ad Hoc */,
 				6D168B1514AE14AA005A19CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

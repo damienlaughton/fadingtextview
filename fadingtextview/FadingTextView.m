@@ -12,18 +12,38 @@
 @implementation FadingTextView
 
 @synthesize fadeColor = fadeColor_;
+@synthesize baseColor = baseColor_;
+@synthesize textColor = textColor_;
+
 @synthesize textViewFrame = textViewFrame_;
 @synthesize textView = _textView;
 @synthesize topFadingView = _topFadingView;
 @synthesize bottomFadingView = _bottomFadingView;
 
--(id)initWithFrame:(CGRect)frame andFadeColor:(UIColor*)fadeColor {
+-(void)dealloc {
+    self.fadeColor = nil;
+    self.baseColor = nil;
+    self.textColor = nil;
+}
+
+-(id)initWithFrame:(CGRect)frame baseColor:(UIColor*)baseColor andTextColor:(UIColor*)textColor {
     self = [super init];
     if (self) {
         self.textViewFrame = frame;
-        self.fadeColor = fadeColor;
+        self.baseColor = baseColor;
+        self.textColor = textColor;
     }
     return self;
+}
+
+-(id)initWithFrame:(CGRect)frame andBaseColor:(UIColor*)baseColor {
+//    self = [super init];
+//    if (self) {
+//        self.textViewFrame = frame;
+//        self.baseColor = baseColor;
+//    }
+//    return self;
+    return [self initWithFrame:frame baseColor:baseColor andTextColor:[UIColor whiteColor]];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -45,6 +65,14 @@
 
 #pragma mark - View lifecycle
 
+-(UIColor*)fadeColor {
+    if (fadeColor_ == nil) {
+        const CGFloat* components = CGColorGetComponents(self.baseColor.CGColor);
+        fadeColor_ = [[UIColor colorWithRed:components[0] green:components[1] blue:components[2] alpha:CGColorGetAlpha(self.baseColor.CGColor)*.1] retain];
+    }
+    return fadeColor_;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -53,7 +81,7 @@
 
     self.view.frame = self.textViewFrame;
     self.textView.frame = self.textViewFrame;
-    float fadingViewsHeight = self.textViewFrame.size.height * 0.1;
+    float fadingViewsHeight = self.textViewFrame.size.height * 0.05;
     
 
     CGRect topFrame = self.textViewFrame;
@@ -64,19 +92,18 @@
     bottomFrame.size.height = fadingViewsHeight;
     bottomFrame.origin.y = bottomFrame.origin.y + self.textViewFrame.size.height - fadingViewsHeight;
     self.bottomFadingView.frame = bottomFrame;
-
     
     CAGradientLayer *g1 = [CAGradientLayer layer];
     g1.frame = self.topFadingView.bounds;
-    g1.colors = [NSArray arrayWithObjects:(id)[self.fadeColor CGColor], (id)[[UIColor clearColor] CGColor], nil];
+    g1.colors = [NSArray arrayWithObjects:(id)[self.baseColor CGColor], (id)[self.fadeColor CGColor], nil];
     [self.topFadingView.layer insertSublayer:g1 atIndex:0];
     
     CAGradientLayer *g2 = [CAGradientLayer layer];
     g2.frame = self.topFadingView.bounds;
-    g2.colors = [NSArray arrayWithObjects:(id)[[UIColor clearColor] CGColor], (id)[self.fadeColor CGColor], nil];
+    g2.colors = [NSArray arrayWithObjects: (id)[self.fadeColor CGColor],(id)[self.baseColor CGColor], nil];
     [self.bottomFadingView.layer insertSublayer:g2 atIndex:0];
     
-    //self.textView.backgroundColor = self.fadeColor;
+    self.textView.backgroundColor = self.baseColor;
 }
 
 - (void)viewDidUnload

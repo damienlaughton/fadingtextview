@@ -26,7 +26,20 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    self.viewController = [[FadingTextView alloc] initWithFrame:CGRectMake(0, 0, 320, 460) andFadeColor:[UIColor redColor]];
+  
+    
+//    +(UIColor*)burgendyColor {
+//        return [UIColor colorWithRed:0.64f green:0.01f blue:0.31f alpha:1.0f];
+//    }
+//    
+//    +(UIColor*)creamColor {
+//        return  [UIColor colorWithRed:0.97f green:0.96f blue:0.91f alpha:1.0f];
+//    }
+    
+    UIColor* baseColor = [UIColor colorWithRed:0.64f green:0.01f blue:0.31f alpha:1.0f];
+    UIColor* textColor = [UIColor colorWithRed:0.97f green:0.96f blue:0.91f alpha:1.0f];
+    
+    self.viewController = [[FadingTextView alloc] initWithFrame:CGRectMake(0, 0, 320, 460) baseColor:baseColor andTextColor:textColor];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

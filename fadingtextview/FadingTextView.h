@@ -10,6 +10,8 @@
 
 @interface FadingTextView : UIViewController {
     UIColor* fadeColor_;
+    UIColor* baseColor_;
+    UIColor* textColor_;
     CGRect textViewFrame_;
     
     UITextView* IBOutlet _textView;
@@ -18,12 +20,15 @@
 }
 
 @property (nonatomic, retain) UIColor* fadeColor;
+@property (nonatomic, retain) UIColor* baseColor;
+@property (nonatomic, retain) UIColor* textColor;
 @property CGRect textViewFrame;
 
 @property (nonatomic, retain) UITextView* textView;
 @property (nonatomic, retain) UIView* topFadingView;
 @property (nonatomic, retain) UIView* bottomFadingView;
 
--(id)initWithFrame:(CGRect)frame andFadeColor:(UIColor*)fadeColor;
+-(id)initWithFrame:(CGRect)frame andBaseColor:(UIColor*)baseColor;
+-(id)initWithFrame:(CGRect)frame baseColor:(UIColor*)baseColor andTextColor:(UIColor*)textColor;
 
 @end
