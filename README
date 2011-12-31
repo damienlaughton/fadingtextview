@@ -1,4 +1,4 @@
-fadingtextview is an iOS skeleton app that demonstrates a UITextView with a backgound solid colour that has two small (5% view height) view superimposed on top of it. Both the small views have a gradient layer applied to them. the effect is that any text that scrolls in the text view appears to fade at both the top and bottom of the text view.
+fadingtextview is an iOS skeleton app that demonstrates a UITextView with a backgound solid colour that has two small (5% view height) views superimposed on top of it. Both the small views have a gradient layer applied to them. the effect is that any text that scrolls in the text view appears to fade at both the top and bottom of the text view.
 
 There are probably much better ways of implementing this. If you know one, why not update the project?
 

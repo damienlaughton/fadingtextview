@@ -1,22 +1,22 @@
 //
-//  FadingTextView.m
+//  FadingContentScrollView.m
 //  fadingtextview
 //
-//  Created by Damien Laughton on 30/12/2011.
+//  Created by Damien Laughton on 31/12/2011.
 //  Copyright (c) 2011 Mobilology Limited. All rights reserved.
 //
 
-#import "FadingTextView.h"
-#import <QuartzCore/QuartzCore.h>
+#import "FadingContentScrollView.h"
 
-@implementation FadingTextView
+@implementation FadingContentScrollView
 
 @synthesize fadeColor = fadeColor_;
 @synthesize baseColor = baseColor_;
-@synthesize textColor = textColor_;
+//@synthesize textColor = textColor_;
+@synthesize scrollViewFrame = scrollViewFrame_;
+@synthesize contentView = contentView_;
 
-@synthesize textViewFrame = textViewFrame_;
-@synthesize textView = _textView;
+@synthesize scrollView = _scrollView;
 @synthesize topFadingView = _topFadingView;
 @synthesize bottomFadingView = _bottomFadingView;
 
@@ -32,28 +32,24 @@
     return fadeColor_;
 }
 
-
 #pragma mark -
 #pragma mark Class Lifecycle
 
 -(void)dealloc {
     self.fadeColor = nil;
     self.baseColor = nil;
-    self.textColor = nil;
+//    self.textColor = nil;
+    self.contentView = nil;
 }
 
--(id)initWithFrame:(CGRect)frame baseColor:(UIColor*)baseColor andTextColor:(UIColor*)textColor {
+-(id)initWithFrame:(CGRect)frame contentView:(UIView*)contentView andBaseColor:(UIColor*)baseColor {
     self = [super init];
     if (self) {
-        self.textViewFrame = frame;
+        self.scrollViewFrame = frame;
+        self.contentView = contentView;
         self.baseColor = baseColor;
-        self.textColor = textColor;
     }
     return self;
-}
-
--(id)initWithFrame:(CGRect)frame andBaseColor:(UIColor*)baseColor {
-    return [self initWithFrame:frame baseColor:baseColor andTextColor:[UIColor whiteColor]];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -80,33 +76,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-
-    self.view.frame = self.textViewFrame;
-    self.textView.frame = self.textViewFrame;
-    float fadingViewsHeight = self.textViewFrame.size.height * 0.05;
-    
-
-    CGRect topFrame = self.textViewFrame;
-    topFrame.size.height = fadingViewsHeight;
-    self.topFadingView.frame = topFrame;
-    
-    CGRect bottomFrame = self.textViewFrame;
-    bottomFrame.size.height = fadingViewsHeight;
-    bottomFrame.origin.y = bottomFrame.origin.y + self.textViewFrame.size.height - fadingViewsHeight;
-    self.bottomFadingView.frame = bottomFrame;
-    
-    CAGradientLayer *g1 = [CAGradientLayer layer];
-    g1.frame = self.topFadingView.bounds;
-    g1.colors = [NSArray arrayWithObjects:(id)[self.baseColor CGColor], (id)[self.fadeColor CGColor], nil];
-    [self.topFadingView.layer insertSublayer:g1 atIndex:0];
-    
-    CAGradientLayer *g2 = [CAGradientLayer layer];
-    g2.frame = self.topFadingView.bounds;
-    g2.colors = [NSArray arrayWithObjects: (id)[self.fadeColor CGColor],(id)[self.baseColor CGColor], nil];
-    [self.bottomFadingView.layer insertSublayer:g2 atIndex:0];
-    
-    self.textView.backgroundColor = self.baseColor;
 }
 
 - (void)viewDidUnload

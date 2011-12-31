@@ -16,6 +16,8 @@
 		6D168B1914AE14F8005A19CA /* FadingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D168B1714AE14F8005A19CA /* FadingTextView.m */; };
 		6D168B1A14AE14F8005A19CA /* FadingTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D168B1814AE14F8005A19CA /* FadingTextView.xib */; };
 		6D168B1C14AE1C9F005A19CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D168B1B14AE1C9F005A19CA /* QuartzCore.framework */; };
+		6D26106614AF13B600503394 /* FadingContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D26106414AF13B600503394 /* FadingContentScrollView.m */; };
+		6D26106714AF13B600503394 /* FadingContentScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D26106514AF13B600503394 /* FadingContentScrollView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,9 @@
 		6D168B1714AE14F8005A19CA /* FadingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FadingTextView.m; sourceTree = "<group>"; };
 		6D168B1814AE14F8005A19CA /* FadingTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FadingTextView.xib; sourceTree = "<group>"; };
 		6D168B1B14AE1C9F005A19CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6D26106314AF13B600503394 /* FadingContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadingContentScrollView.h; sourceTree = "<group>"; };
+		6D26106414AF13B600503394 /* FadingContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FadingContentScrollView.m; sourceTree = "<group>"; };
+		6D26106514AF13B600503394 /* FadingContentScrollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FadingContentScrollView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +92,9 @@
 				6D168B1614AE14F8005A19CA /* FadingTextView.h */,
 				6D168B1714AE14F8005A19CA /* FadingTextView.m */,
 				6D168B1814AE14F8005A19CA /* FadingTextView.xib */,
+				6D26106314AF13B600503394 /* FadingContentScrollView.h */,
+				6D26106414AF13B600503394 /* FadingContentScrollView.m */,
+				6D26106514AF13B600503394 /* FadingContentScrollView.xib */,
 			);
 			path = fadingtextview;
 			sourceTree = "<group>";
@@ -155,6 +163,7 @@
 			files = (
 				6D168B0414AE14AA005A19CA /* InfoPlist.strings in Resources */,
 				6D168B1A14AE14F8005A19CA /* FadingTextView.xib in Resources */,
+				6D26106714AF13B600503394 /* FadingContentScrollView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +177,7 @@
 				6D168B0614AE14AA005A19CA /* main.m in Sources */,
 				6D168B0A14AE14AA005A19CA /* AppDelegate.m in Sources */,
 				6D168B1914AE14F8005A19CA /* FadingTextView.m in Sources */,
+				6D26106614AF13B600503394 /* FadingContentScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,12 +292,10 @@
 		6D168B2714AE6E01005A19CA /* Ad Hoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mobilology Limited";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fadingtextview/fadingtextview-Prefix.pch";
 				INFOPLIST_FILE = "fadingtextview/fadingtextview-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "DE7D422A-25F6-41DD-ABF5-F7ADF39EBB15";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
