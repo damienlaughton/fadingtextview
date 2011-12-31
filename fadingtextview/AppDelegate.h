@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class FadingTextView;
+@class IdiomaticMainViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) FadingTextView *viewController;
+@property (strong, nonatomic) IdiomaticMainViewController* mainViewController;
 
 @end

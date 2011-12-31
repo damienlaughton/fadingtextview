@@ -83,15 +83,18 @@
     
 
     self.view.frame = self.textViewFrame;
-    self.textView.frame = self.textViewFrame;
-    float fadingViewsHeight = self.textViewFrame.size.height * 0.05;
+    CGRect tvFrame = self.textViewFrame;
+    tvFrame.origin.x = 0;
+    tvFrame.origin.y = 0;
+    self.textView.frame = tvFrame;
     
+    float fadingViewsHeight = self.textViewFrame.size.height * 0.05;
 
-    CGRect topFrame = self.textViewFrame;
+    CGRect topFrame = tvFrame;
     topFrame.size.height = fadingViewsHeight;
     self.topFadingView.frame = topFrame;
     
-    CGRect bottomFrame = self.textViewFrame;
+    CGRect bottomFrame = tvFrame;
     bottomFrame.size.height = fadingViewsHeight;
     bottomFrame.origin.y = bottomFrame.origin.y + self.textViewFrame.size.height - fadingViewsHeight;
     self.bottomFadingView.frame = bottomFrame;

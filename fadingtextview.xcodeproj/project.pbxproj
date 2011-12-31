@@ -18,6 +18,13 @@
 		6D168B1C14AE1C9F005A19CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D168B1B14AE1C9F005A19CA /* QuartzCore.framework */; };
 		6D26106614AF13B600503394 /* FadingContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D26106414AF13B600503394 /* FadingContentScrollView.m */; };
 		6D26106714AF13B600503394 /* FadingContentScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D26106514AF13B600503394 /* FadingContentScrollView.xib */; };
+		6D26106F14AF1EBB00503394 /* IdiomaticMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D26106D14AF1EBB00503394 /* IdiomaticMainViewController.m */; };
+		6D26107014AF1EBB00503394 /* IdiomaticMainViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D26106E14AF1EBB00503394 /* IdiomaticMainViewController_iPhone.xib */; };
+		6D26107214AF1F3100503394 /* IdiomaticMainViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D26107114AF1F3100503394 /* IdiomaticMainViewController_iPad.xib */; };
+		6D26107814AF3A1D00503394 /* sample_image2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6D26107414AF3A1D00503394 /* sample_image2.jpeg */; };
+		6D26107914AF3A1D00503394 /* sample_image3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6D26107514AF3A1D00503394 /* sample_image3.jpeg */; };
+		6D26107A14AF3A1D00503394 /* sample_image4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6D26107614AF3A1D00503394 /* sample_image4.jpeg */; };
+		6D26107C14AF3DC600503394 /* sample_image1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6D26107B14AF3DC600503394 /* sample_image1.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +45,14 @@
 		6D26106314AF13B600503394 /* FadingContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadingContentScrollView.h; sourceTree = "<group>"; };
 		6D26106414AF13B600503394 /* FadingContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FadingContentScrollView.m; sourceTree = "<group>"; };
 		6D26106514AF13B600503394 /* FadingContentScrollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FadingContentScrollView.xib; sourceTree = "<group>"; };
+		6D26106C14AF1EBB00503394 /* IdiomaticMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdiomaticMainViewController.h; sourceTree = "<group>"; };
+		6D26106D14AF1EBB00503394 /* IdiomaticMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdiomaticMainViewController.m; sourceTree = "<group>"; };
+		6D26106E14AF1EBB00503394 /* IdiomaticMainViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IdiomaticMainViewController_iPhone.xib; sourceTree = "<group>"; };
+		6D26107114AF1F3100503394 /* IdiomaticMainViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IdiomaticMainViewController_iPad.xib; sourceTree = "<group>"; };
+		6D26107414AF3A1D00503394 /* sample_image2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_image2.jpeg; sourceTree = "<group>"; };
+		6D26107514AF3A1D00503394 /* sample_image3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_image3.jpeg; sourceTree = "<group>"; };
+		6D26107614AF3A1D00503394 /* sample_image4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_image4.jpeg; sourceTree = "<group>"; };
+		6D26107B14AF3DC600503394 /* sample_image1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_image1.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +103,10 @@
 			children = (
 				6D168B0814AE14AA005A19CA /* AppDelegate.h */,
 				6D168B0914AE14AA005A19CA /* AppDelegate.m */,
+				6D26106C14AF1EBB00503394 /* IdiomaticMainViewController.h */,
+				6D26106D14AF1EBB00503394 /* IdiomaticMainViewController.m */,
+				6D26106E14AF1EBB00503394 /* IdiomaticMainViewController_iPhone.xib */,
+				6D26107114AF1F3100503394 /* IdiomaticMainViewController_iPad.xib */,
 				6D168B0014AE14AA005A19CA /* Supporting Files */,
 				6D168B1614AE14F8005A19CA /* FadingTextView.h */,
 				6D168B1714AE14F8005A19CA /* FadingTextView.m */,
@@ -95,6 +114,10 @@
 				6D26106314AF13B600503394 /* FadingContentScrollView.h */,
 				6D26106414AF13B600503394 /* FadingContentScrollView.m */,
 				6D26106514AF13B600503394 /* FadingContentScrollView.xib */,
+				6D26107B14AF3DC600503394 /* sample_image1.jpeg */,
+				6D26107414AF3A1D00503394 /* sample_image2.jpeg */,
+				6D26107514AF3A1D00503394 /* sample_image3.jpeg */,
+				6D26107614AF3A1D00503394 /* sample_image4.jpeg */,
 			);
 			path = fadingtextview;
 			sourceTree = "<group>";
@@ -164,6 +187,12 @@
 				6D168B0414AE14AA005A19CA /* InfoPlist.strings in Resources */,
 				6D168B1A14AE14F8005A19CA /* FadingTextView.xib in Resources */,
 				6D26106714AF13B600503394 /* FadingContentScrollView.xib in Resources */,
+				6D26107014AF1EBB00503394 /* IdiomaticMainViewController_iPhone.xib in Resources */,
+				6D26107214AF1F3100503394 /* IdiomaticMainViewController_iPad.xib in Resources */,
+				6D26107814AF3A1D00503394 /* sample_image2.jpeg in Resources */,
+				6D26107914AF3A1D00503394 /* sample_image3.jpeg in Resources */,
+				6D26107A14AF3A1D00503394 /* sample_image4.jpeg in Resources */,
+				6D26107C14AF3DC600503394 /* sample_image1.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +207,7 @@
 				6D168B0A14AE14AA005A19CA /* AppDelegate.m in Sources */,
 				6D168B1914AE14F8005A19CA /* FadingTextView.m in Sources */,
 				6D26106614AF13B600503394 /* FadingContentScrollView.m in Sources */,
+				6D26106F14AF1EBB00503394 /* IdiomaticMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +322,7 @@
 		6D168B2714AE6E01005A19CA /* Ad Hoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fadingtextview/fadingtextview-Prefix.pch";
 				INFOPLIST_FILE = "fadingtextview/fadingtextview-Info.plist";

@@ -11,7 +11,6 @@
 @interface FadingContentScrollView : UIViewController {
     UIColor* fadeColor_;
     UIColor* baseColor_;
-//    UIColor* textColor_;
     CGRect scrollViewFrame_;
     UIView* contentView_;
     
@@ -22,7 +21,6 @@
 
 @property (nonatomic, retain) UIColor* fadeColor;
 @property (nonatomic, retain) UIColor* baseColor;
-//@property (nonatomic, retain) UIColor* textColor;
 @property CGRect scrollViewFrame;
 @property (nonatomic, retain) UIView* contentView;
 
