@@ -13,11 +13,15 @@
 
 @interface IdiomaticMainViewController : UIViewController {
     FadingTextView* ftv_;
-    FadingContentScrollView* fcsv_;
+    FadingContentScrollView* fcsv1_;
+    FadingContentScrollView* fcsv2_;
     
-    UIView* IBOutlet _contentView;
+    UIView* IBOutlet _contentView1;
+    UIView* IBOutlet _contentView2;
+
 }
 
 @property (nonatomic, retain) FadingTextView* ftv;
-@property (nonatomic, retain) FadingContentScrollView* fcsv;
+@property (nonatomic, retain) FadingContentScrollView* fcsv1;
+@property (nonatomic, retain) FadingContentScrollView* fcsv2;
 @end

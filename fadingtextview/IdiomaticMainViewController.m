@@ -13,7 +13,8 @@
 @implementation IdiomaticMainViewController
 
 @synthesize ftv = ftv_;
-@synthesize fcsv = fcsv_;
+@synthesize fcsv1 = fcsv1_;
+@synthesize fcsv2 = fcsv2_;
 
 #pragma mark -
 #pragma mark Properties
@@ -28,11 +29,18 @@
     return ftv_;
 }
 
--(FadingContentScrollView*)fcsv {
-    if (fcsv_ == nil) {
-        fcsv_ = [[FadingContentScrollView alloc] initWithFrame:CGRectMake(100, 100, 300, 400) contentView:_contentView andBaseColor:[UIColor redColor]];
+-(FadingContentScrollView*)fcsv1 {
+    if (fcsv1_ == nil) {
+        fcsv1_ = [[FadingContentScrollView alloc] initWithFrame:CGRectMake(100, 100, 300, 400) contentView:_contentView1 andBaseColor:[UIColor redColor]];
     }
-    return fcsv_;
+    return fcsv1_;
+}
+
+-(FadingContentScrollView*)fcsv2 {
+    if (fcsv2_ == nil) {
+        fcsv2_ = [[FadingContentScrollView alloc] initWithFrame:CGRectMake(300, 500, 300, 300) contentView:_contentView2 andBaseColor:[UIColor blueColor]];
+    }
+    return fcsv2_;
 }
 
 #pragma mark -
@@ -40,7 +48,8 @@
 
 -(void)dealloc {
     self.ftv = nil;
-    self.fcsv = nil;
+    self.fcsv1 = nil;
+    self.fcsv2 = nil;
     [super dealloc];
 }
 
@@ -79,7 +88,8 @@
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         [self.view addSubview:self.ftv.view];
     } else {
-        [self.view addSubview:self.fcsv.view];
+        [self.view addSubview:self.fcsv1.view];
+        [self.view addSubview:self.fcsv2.view];
     }
 }
 
