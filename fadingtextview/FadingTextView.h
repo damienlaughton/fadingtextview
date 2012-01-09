@@ -17,6 +17,9 @@
     UITextView* IBOutlet _textView;
     UIView* IBOutlet _topFadingView;
     UIView* IBOutlet _bottomFadingView;
+    
+    CAGradientLayer *g1_;
+    CAGradientLayer *g2_;
 }
 
 @property (nonatomic, retain) UIColor* fadeColor;
@@ -28,7 +31,12 @@
 @property (nonatomic, retain) UIView* topFadingView;
 @property (nonatomic, retain) UIView* bottomFadingView;
 
+@property (nonatomic, retain) CAGradientLayer *g1;
+@property (nonatomic, retain) CAGradientLayer *g2;
+
 -(id)initWithFrame:(CGRect)frame andBaseColor:(UIColor*)baseColor;
 -(id)initWithFrame:(CGRect)frame baseColor:(UIColor*)baseColor andTextColor:(UIColor*)textColor;
+
+-(void)resizeFadeLayer;
 
 @end
