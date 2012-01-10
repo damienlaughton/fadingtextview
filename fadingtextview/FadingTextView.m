@@ -7,7 +7,7 @@
 //
 
 #import "FadingTextView.h"
-#import <QuartzCore/QuartzCore.h>
+
 
 @implementation FadingTextView
 
@@ -35,23 +35,34 @@
     return fadeColor_;
 }
 
+-(void)setTextViewFrame:(CGRect)textViewFrame {
+    textViewFrame_ = textViewFrame;
+    self.view.frame = textViewFrame_;
+    
+    CGRect tvFrame = self.view.frame;
+    tvFrame.origin.x = 0;
+    tvFrame.origin.y = 0;
+    self.textView.frame = tvFrame;
+    
+    float fadingViewsHeight = self.textViewFrame.size.height * 0.05;
+    
+    CGRect topFrame = tvFrame;
+    topFrame.size.height = fadingViewsHeight;
+    self.topFadingView.frame = topFrame;
+    
+    CGRect bottomFrame = tvFrame;
+    bottomFrame.size.height = fadingViewsHeight;
+    bottomFrame.origin.y = bottomFrame.origin.y + tvFrame.size.height - fadingViewsHeight;
+    self.bottomFadingView.frame = bottomFrame;
+    
+    self.g1.frame = self.topFadingView.frame;
+    self.g2.frame = self.topFadingView.frame;
+    
+}
+
 -(CAGradientLayer*)g1 {
     if (g1_ == nil) {
         g1_ = [[CAGradientLayer layer] retain];
-        
-        CGRect tvFrame = self.textViewFrame;
-        tvFrame.origin.x = 0;
-        tvFrame.origin.y = 0;
-        self.textView.frame = tvFrame;
-        
-        float fadingViewsHeight = self.textViewFrame.size.height * 0.05;
-        
-        CGRect topFrame = tvFrame;
-        topFrame.size.height = fadingViewsHeight;
-        self.topFadingView.frame = topFrame;
-
-        
-        g1_.frame = self.topFadingView.bounds;
         g1_.colors = [NSArray arrayWithObjects:(id)[self.baseColor CGColor], (id)[self.fadeColor CGColor], nil];
     }
     return g1_;
@@ -60,25 +71,10 @@
 -(CAGradientLayer*)g2 {
     if (g2_ == nil) {
         g2_ = [[CAGradientLayer layer] retain];
-        
-        CGRect tvFrame = self.textViewFrame;
-        tvFrame.origin.x = 0;
-        tvFrame.origin.y = 0;
-        self.textView.frame = tvFrame;
-        
-        float fadingViewsHeight = self.textViewFrame.size.height * 0.05;
-        
-        CGRect bottomFrame = tvFrame;
-        bottomFrame.size.height = fadingViewsHeight;
-        bottomFrame.origin.y = bottomFrame.origin.y + self.textViewFrame.size.height - fadingViewsHeight;
-        self.bottomFadingView.frame = bottomFrame;
-        
-        g2_.frame = self.topFadingView.bounds;
         g2_.colors = [NSArray arrayWithObjects: (id)[self.fadeColor CGColor],(id)[self.baseColor CGColor], nil];
     }
     return g2_;
 }
-
 
 #pragma mark -
 #pragma mark Class Lifecycle
@@ -95,9 +91,10 @@
 -(id)initWithFrame:(CGRect)frame baseColor:(UIColor*)baseColor andTextColor:(UIColor*)textColor {
     self = [super init];
     if (self) {
-        self.textViewFrame = frame;
+        
         self.baseColor = baseColor;
         self.textColor = textColor;
+        self.textViewFrame = frame;
     }
     return self;
 }
@@ -130,33 +127,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-
-//    self.view.frame = self.textViewFrame;
-//    CGRect tvFrame = self.textViewFrame;
-//    tvFrame.origin.x = 0;
-//    tvFrame.origin.y = 0;
-//    self.textView.frame = tvFrame;
-//    
-//    float fadingViewsHeight = self.textViewFrame.size.height * 0.05;
-//
-//    CGRect topFrame = tvFrame;
-//    topFrame.size.height = fadingViewsHeight;
-//    self.topFadingView.frame = topFrame;
-//    
-//    CGRect bottomFrame = tvFrame;
-//    bottomFrame.size.height = fadingViewsHeight;
-//    bottomFrame.origin.y = bottomFrame.origin.y + self.textViewFrame.size.height - fadingViewsHeight;
-//    self.bottomFadingView.frame = bottomFrame;
-    
-//    CAGradientLayer *g1 = [CAGradientLayer layer];
-//    g1.frame = self.topFadingView.bounds;
-//    g1.colors = [NSArray arrayWithObjects:(id)[self.baseColor CGColor], (id)[self.fadeColor CGColor], nil];
     [self.topFadingView.layer insertSublayer:self.g1 atIndex:0];
     
-//    CAGradientLayer *g2 = [CAGradientLayer layer];
-//    g2.frame = self.topFadingView.bounds;
-//    g2.colors = [NSArray arrayWithObjects: (id)[self.fadeColor CGColor],(id)[self.baseColor CGColor], nil];
     [self.bottomFadingView.layer insertSublayer:self.g2 atIndex:0];
     
     self.textView.backgroundColor = self.baseColor;
@@ -175,32 +147,5 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-
-
-
--(void)resizeFadeLayer {
-    CGRect tvFrame = self.view.frame;
-    tvFrame.origin.x = 0;
-    tvFrame.origin.y = 0;
-    self.textView.frame = tvFrame;
-    
-    float fadingViewsHeight = self.textViewFrame.size.height * 0.05;
-    
-    CGRect topFrame = tvFrame;
-    topFrame.size.height = fadingViewsHeight;
-    self.topFadingView.frame = topFrame;
-    
-    CGRect bottomFrame = tvFrame;
-    bottomFrame.size.height = fadingViewsHeight;
-    bottomFrame.origin.y = bottomFrame.origin.y + tvFrame.size.height - fadingViewsHeight;
-    self.bottomFadingView.frame = bottomFrame;
-
-    self.g1.frame = self.topFadingView.frame;
-    self.g2.frame = self.topFadingView.frame;
-    
-}
-
-
-
 
 @end

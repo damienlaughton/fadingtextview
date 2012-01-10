@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface FadingTextView : UIViewController {
     UIColor* fadeColor_;
@@ -25,7 +26,7 @@
 @property (nonatomic, retain) UIColor* fadeColor;
 @property (nonatomic, retain) UIColor* baseColor;
 @property (nonatomic, retain) UIColor* textColor;
-@property CGRect textViewFrame;
+@property (nonatomic, assign) CGRect textViewFrame;
 
 @property (nonatomic, retain) UITextView* textView;
 @property (nonatomic, retain) UIView* topFadingView;
@@ -36,7 +37,5 @@
 
 -(id)initWithFrame:(CGRect)frame andBaseColor:(UIColor*)baseColor;
 -(id)initWithFrame:(CGRect)frame baseColor:(UIColor*)baseColor andTextColor:(UIColor*)textColor;
-
--(void)resizeFadeLayer;
 
 @end
