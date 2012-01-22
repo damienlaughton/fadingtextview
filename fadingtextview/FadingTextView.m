@@ -35,6 +35,24 @@
     return fadeColor_;
 }
 
+
+-(CAGradientLayer*)g1 {
+    if (g1_ == nil) {
+        g1_ = [[CAGradientLayer layer] retain];
+        g1_.colors = [NSArray arrayWithObjects:(id)[self.baseColor CGColor], (id)[self.fadeColor CGColor], nil];
+    }
+    return g1_;
+}
+
+-(CAGradientLayer*)g2 {
+    if (g2_ == nil) {
+        g2_ = [[CAGradientLayer layer] retain];
+        g2_.colors = [NSArray arrayWithObjects: (id)[self.fadeColor CGColor],(id)[self.baseColor CGColor], nil];
+    }
+    return g2_;
+}
+
+
 -(void)setTextViewFrame:(CGRect)textViewFrame {
     textViewFrame_ = textViewFrame;
     self.view.frame = textViewFrame_;
@@ -58,22 +76,6 @@
     self.g1.frame = self.topFadingView.frame;
     self.g2.frame = self.topFadingView.frame;
     
-}
-
--(CAGradientLayer*)g1 {
-    if (g1_ == nil) {
-        g1_ = [[CAGradientLayer layer] retain];
-        g1_.colors = [NSArray arrayWithObjects:(id)[self.baseColor CGColor], (id)[self.fadeColor CGColor], nil];
-    }
-    return g1_;
-}
-
--(CAGradientLayer*)g2 {
-    if (g2_ == nil) {
-        g2_ = [[CAGradientLayer layer] retain];
-        g2_.colors = [NSArray arrayWithObjects: (id)[self.fadeColor CGColor],(id)[self.baseColor CGColor], nil];
-    }
-    return g2_;
 }
 
 #pragma mark -
