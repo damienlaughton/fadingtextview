@@ -26,7 +26,7 @@
         UIColor* baseColor = [UIColor colorWithRed:0.64f green:0.01f blue:0.31f alpha:1.0f];
         UIColor* textColor = [UIColor colorWithRed:0.97f green:0.96f blue:0.91f alpha:1.0f];
     
-        ftv_ = [[FadingTextView alloc] initWithFrame:CGRectMake(50, 50, 100, 200) baseColor:baseColor andTextColor:textColor];
+        ftv_ = [[FadingTextView alloc] initWithFrame:CGRectMake(0, 0, 320, 460) baseColor:baseColor andTextColor:textColor];
     }
     return ftv_;
 }
