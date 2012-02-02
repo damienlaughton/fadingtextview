@@ -15,6 +15,8 @@
 @synthesize ftv = ftv_;
 @synthesize fcsv1 = fcsv1_;
 @synthesize fcsv2 = fcsv2_;
+@synthesize fcsv3 = fcsv3_;
+@synthesize fcsv4 = fcsv4_;
 
 #pragma mark -
 #pragma mark Properties
@@ -31,16 +33,30 @@
 
 -(FadingContentScrollView*)fcsv1 {
     if (fcsv1_ == nil) {
-        fcsv1_ = [[FadingContentScrollView alloc] initWithFrame:CGRectMake(100, 100, 300, 400) contentView:_contentView1 andBaseColor:[UIColor redColor]];
+        fcsv1_ = [[FadingContentScrollView alloc] initWithFrame:CGRectMake(50, 100, 300, 400) contentView:_contentView1 andBaseColor:[UIColor redColor]];
     }
     return fcsv1_;
 }
 
 -(FadingContentScrollView*)fcsv2 {
     if (fcsv2_ == nil) {
-        fcsv2_ = [[FadingContentScrollView alloc] initWithFrame:CGRectMake(300, 500, 300, 300) contentView:_contentView2 andBaseColor:[UIColor blueColor]];
+        fcsv2_ = [[FadingContentScrollView alloc] initWithFrame:CGRectMake(450, 150, 300, 300) contentView:_contentView2 andBaseColor:[UIColor blueColor]];
     }
     return fcsv2_;
+}
+
+-(FadingContentScrollView*)fcsv3 {
+    if (fcsv3_ == nil) {
+        fcsv3_ = [[FadingContentScrollView alloc] initWithFrame:CGRectMake(75, 550, 250, 250) contentView:_contentView3 baseColor:[UIColor redColor] andFadeOrientation:FADE_LEFTNRIGHT];
+    }
+    return fcsv3_;
+}
+
+-(FadingContentScrollView*)fcsv4 {
+    if (fcsv4_ == nil) {
+        fcsv4_ = [[FadingContentScrollView alloc] initWithFrame:CGRectMake(400, 500, 325, 250) contentView:_contentView4 baseColor:[UIColor blueColor] andFadeOrientation:FADE_TOPNBOTTOM];
+    }
+    return fcsv4_;
 }
 
 #pragma mark -
@@ -50,6 +66,8 @@
     self.ftv = nil;
     self.fcsv1 = nil;
     self.fcsv2 = nil;
+    self.fcsv3 = nil;
+    self.fcsv4 = nil;
     [super dealloc];
 }
 
@@ -90,6 +108,8 @@
     } else {
         [self.view addSubview:self.fcsv1.view];
         [self.view addSubview:self.fcsv2.view];
+        [self.view addSubview:self.fcsv3.view];
+        [self.view addSubview:self.fcsv4.view];
     }
 }
 

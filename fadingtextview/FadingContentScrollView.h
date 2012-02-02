@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
+typedef enum _fade_orientation {
+    FADE_TOPNBOTTOM = 0,
+    FADE_LEFTNRIGHT
+} fade_orientation;
+
 @interface FadingContentScrollView : UIViewController {
     UIColor* fadeColor_;
     UIColor* baseColor_;
@@ -19,8 +24,10 @@
     UIView* IBOutlet _topFadingView;
     UIView* IBOutlet _bottomFadingView;
     
-    CAGradientLayer *g1_;
+    CAGradientLayer *g1_; // 
     CAGradientLayer *g2_;
+    
+    fade_orientation fadeOrientation_;
 
 }
 
@@ -36,7 +43,9 @@
 @property (nonatomic, retain) CAGradientLayer *g2;
 @property (nonatomic, retain) UIView* bottomFadingView;
 
--(id)initWithFrame:(CGRect)frame contentView:(UIView*)contentView andBaseColor:(UIColor*)baseColor;
+@property (nonatomic, assign) fade_orientation fadeOrientation;
 
+-(id)initWithFrame:(CGRect)frame contentView:(UIView*)contentView andBaseColor:(UIColor*)baseColor;
+-(id)initWithFrame:(CGRect)frame contentView:(UIView*)contentView baseColor:(UIColor*)baseColor andFadeOrientation:(fade_orientation)fadeOrientation;
 
 @end

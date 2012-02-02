@@ -23,6 +23,8 @@
 @synthesize g1 = g1_;
 @synthesize g2 = g2_;
 
+@synthesize fadeOrientation = fadeOrientation_;
+
 #pragma mark -
 #pragma mark Properties
 
@@ -39,6 +41,12 @@
 -(CAGradientLayer*)g1 {
     if (g1_ == nil) {
         g1_ = [[CAGradientLayer layer] retain];
+        
+        if (self.fadeOrientation == FADE_LEFTNRIGHT) {
+            g1_.startPoint = CGPointMake(0, 0.5);
+            g1_.endPoint = CGPointMake(1.0, 0.5);            
+        }
+
         g1_.colors = [NSArray arrayWithObjects:(id)[self.baseColor CGColor], (id)[self.fadeColor CGColor], nil];
     }
     return g1_;
@@ -47,6 +55,12 @@
 -(CAGradientLayer*)g2 {
     if (g2_ == nil) {
         g2_ = [[CAGradientLayer layer] retain];
+        
+        if (self.fadeOrientation == FADE_LEFTNRIGHT) {
+            g2_.startPoint = CGPointMake(0, 0.5);
+            g2_.endPoint = CGPointMake(1.0, 0.5);            
+        }
+        
         g2_.colors = [NSArray arrayWithObjects: (id)[self.fadeColor CGColor],(id)[self.baseColor CGColor], nil];
     }
     return g2_;
@@ -57,24 +71,53 @@
     scrollViewFrame_ = scrollViewFrame;
     self.view.frame = scrollViewFrame_;
     
-    CGRect csvFrame = self.view.frame;
-    csvFrame.origin.x = 0;
-    csvFrame.origin.y = 0;    
-    self.scrollView.frame = csvFrame;
+    if (self.fadeOrientation == FADE_TOPNBOTTOM) {
     
-    float fadingViewsHeight = self.scrollViewFrame.size.height * 0.05;
-    
-    CGRect topFrame = csvFrame;
-    topFrame.size.height = fadingViewsHeight;
-    self.topFadingView.frame = topFrame;
-    
-    CGRect bottomFrame = csvFrame;
-    bottomFrame.size.height = fadingViewsHeight;
-    bottomFrame.origin.y = bottomFrame.origin.y + csvFrame.size.height - fadingViewsHeight;
-    self.bottomFadingView.frame = bottomFrame;
-    
-    self.g1.frame = self.topFadingView.frame;
-    self.g2.frame = self.topFadingView.frame;
+        CGRect csvFrame = self.view.frame;
+        csvFrame.origin.x = 0;
+        csvFrame.origin.y = 0;    
+        self.scrollView.frame = csvFrame;
+        
+        float fadingViewsHeight = self.scrollViewFrame.size.height * 0.05;
+        
+        CGRect topFrame = csvFrame;
+        topFrame.size.height = fadingViewsHeight;
+        self.topFadingView.frame = topFrame;
+        
+        CGRect bottomFrame = csvFrame;
+        bottomFrame.size.height = fadingViewsHeight;
+        bottomFrame.origin.y = bottomFrame.origin.y + csvFrame.size.height - fadingViewsHeight;
+        self.bottomFadingView.frame = bottomFrame;
+        
+        //both the layers cover the full extent of their frames
+        //so they start at {0,0}
+        self.g1.frame = self.topFadingView.frame;
+        self.g2.frame = self.topFadingView.frame;
+        
+    } else  { // (self.fadeOrientation == FADE_LEFTNRIGHT)
+        
+        CGRect csvFrame = self.view.frame;
+        csvFrame.origin.x = 0;
+        csvFrame.origin.y = 0;    
+        self.scrollView.frame = csvFrame;
+        
+        float fadingViewsWidth = self.scrollViewFrame.size.width * 0.05;
+        
+        CGRect leftFrame = csvFrame;
+        leftFrame.size.width = fadingViewsWidth;
+        self.topFadingView.frame = leftFrame;
+        
+        CGRect rightFrame = csvFrame;
+        rightFrame.size.height = fadingViewsWidth;
+        rightFrame.origin.x = rightFrame.origin.x + csvFrame.size.width - fadingViewsWidth;
+        self.bottomFadingView.frame = rightFrame;
+        
+        //both the layers cover the full extent of their frames
+        //so they start at {0,0}
+        self.g1.frame = self.topFadingView.frame;
+        self.g2.frame = self.topFadingView.frame;
+
+    }
     
 }
 
@@ -92,15 +135,22 @@
     self.g2 = nil;
 }
 
-
--(id)initWithFrame:(CGRect)frame contentView:(UIView*)contentView andBaseColor:(UIColor*)baseColor {
+-(id)initWithFrame:(CGRect)frame contentView:(UIView*)contentView baseColor:(UIColor*)baseColor andFadeOrientation:(fade_orientation)fadeOrientation {
     self = [super init];
     if (self) {
         self.contentView = contentView;
         self.baseColor = baseColor;
+        self.fadeOrientation = fadeOrientation;
         self.scrollViewFrame = frame;
+        
     }
     return self;
+}
+
+
+-(id)initWithFrame:(CGRect)frame contentView:(UIView*)contentView andBaseColor:(UIColor*)baseColor {
+
+    return [self initWithFrame:frame contentView:contentView baseColor:baseColor andFadeOrientation:FADE_TOPNBOTTOM];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

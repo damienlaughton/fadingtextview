@@ -73,6 +73,8 @@
     bottomFrame.origin.y = bottomFrame.origin.y + tvFrame.size.height - fadingViewsHeight;
     self.bottomFadingView.frame = bottomFrame;
     
+    //both the layers cover the full extent of their frames
+    //so they start at {0,0}
     self.g1.frame = self.topFadingView.frame;
     self.g2.frame = self.topFadingView.frame;
     
