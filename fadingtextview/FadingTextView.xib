@@ -137,6 +137,7 @@ dWxsYS4gTmFtIG5lYyBydXRydW0gbGFjdXMuA</bytes>
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MCAwAA</bytes>
 						</object>
+						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 					<object class="IBUIView" id="538589744">
@@ -147,6 +148,7 @@ dWxsYS4gTmFtIG5lYyBydXRydW0gbGFjdXMuA</bytes>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:196</string>
 						<reference key="IBUIBackgroundColor" ref="767702137"/>
+						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 				</array>
